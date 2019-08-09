@@ -1,0 +1,16 @@
+{
+    "name": "HelloWorld",
+    "version": "1.0.0",
+    "description": "simple app that returns Hello World",
+    "main": "index.js",
+    "scripts": {
+        "start": "node ./index.js",
+        "test": "node ./runTest.js"
+    },
+    "author": "Ahmad Khudeish",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.17.1",
+        "newman": "^4.5.3"
+    }
+}

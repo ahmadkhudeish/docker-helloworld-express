@@ -1,0 +1,46 @@
+{
+    "info": {
+        "_postman_id": "35b84de8-8306-42fa-8ca8-fa2cf3fd4e8c",
+        "name": "EIT Test",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "getHelloWorld",
+            "event": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "id": "d2cc6969-76d0-49f0-a908-2ae72188b43a",
+                        "exec": [
+                            "pm.test(\"Body contains Hello World\", function () {",
+                            "    pm.expect(pm.response.text()).to.include(\"Hello World\");",
+                            "});",
+                            "pm.test(\"Successful GET request with valid response code 200\", function () {",
+                            "    pm.expect(pm.response.code).to.be.oneOf([200]);",
+                            "});",
+                            ""
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ],
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": ""
+                },
+                "url": {
+                    "raw": "http://localhost:3000/hello",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "3000",
+                    "path": ["hello"]
+                }
+            },
+            "response": []
+        }
+    ]
+}
